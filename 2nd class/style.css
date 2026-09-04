@@ -1,0 +1,30 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url(image/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+main{
+    display: inline-block;
+    color: darkgoldenrod;
+    font-size: 20px;
+    padding:30px;
+    max-width:900px;
+    margin:0 auto;
+}
+footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 6px 0;
+    background: #fff;
+}

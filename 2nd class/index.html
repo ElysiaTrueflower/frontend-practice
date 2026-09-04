@@ -4,25 +4,28 @@
         <meta charset="UTF-8" doctype html>
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
         <title>今天吃什么？</title>
+        <link rel="stylesheet" href="style.css">
     </head>
+
+    <header>
+        <h2>吃？饭意向收集</h2>
+    </header>
+
+    <nav>
+        <p style="display:inline-block;color: crimson;font-size: 18px; font-weight:bold;">sxy红心推荐：</p>
+        <a href="https://www.bilibili.com/video/BV1KmDZBPEu7/?spm_id_from=333.1387.favlist.content.click&vd_source=612435f9bc6c72d0a962fcb3257ca48e" target="_blank">美食一</a>
+        <a href="https://www.bilibili.com/video/BV1onRxBKE8b/?spm_id_from=333.1387.favlist.content.click&vd_source=612435f9bc6c72d0a962fcb3257ca48e" target="_blank">美食二</a>
+        <a href="https://www.bilibili.com/video/BV17qJs6XERk/?spm_id_from=333.1387.favlist.content.click&vd_source=612435f9bc6c72d0a962fcb3257ca48e" target="_blank">美食三</a>
+    </nav>
+
+    <main>
+        <p >我给你分享的美食居然不鉴赏</p>
+        <section><img src="image/daishu.jpg" style="width:200px;"></section>
+    </main>
+
     <body>
-        <header>
-            <h2>吃？饭意向收集</h2>
-        </header>
 
-        <nav>
-            <p style="display:inline-block;color: crimson;font-size: 18px; font-weight:bold;">sxy红心推荐：</p>
-            <a href="https://www.bilibili.com/video/BV1KmDZBPEu7/?spm_id_from=333.1387.favlist.content.click&vd_source=612435f9bc6c72d0a962fcb3257ca48e">美食一</a>
-            <a href="https://www.bilibili.com/video/BV1onRxBKE8b/?spm_id_from=333.1387.favlist.content.click&vd_source=612435f9bc6c72d0a962fcb3257ca48e">美食二</a>
-            <a href="https://www.bilibili.com/video/BV17qJs6XERk/?spm_id_from=333.1387.favlist.content.click&vd_source=612435f9bc6c72d0a962fcb3257ca48e">美食三</a>
-        </nav>
-
-        <main>
-            <section><img src="image/daishu.jpg" style="width:200px;"></section>
-            <p style="display: inline-block; color: darkgoldenrod;font-size: 20px;">我给你分享的美食居然不鉴赏</p>
-        </main>
-
-        <h3 style="text-align: center;">今天吃什么😍</h1>
+        <h3 style="text-align: center;">今天吃什么😍</h3>
         <form>
             <!--文本输入框-->
             <label for="name">姓名：</label>
@@ -31,6 +34,9 @@
             <!--内容输入框-->
             <label for="food">你想吃：</label>
             <input type="text" id="food" name="food" required>
+            <br>
+            <label for="mail">你的邮箱 ：</label>
+            <input type="email" id="mail" name="mail" required>
             <br>
             <!--单选-->
             <label>性别:</label>
@@ -57,9 +63,15 @@
                 <option value="zi">梓苑</option>
                 <option value="hua">回宿舍</option>
             </select>
+            <br>
             <!-- 提交按钮 -->
             <input type="submit" value="提交">
         </form>
         
     </body>
+
+    <footer>
+        MadeBy@Starbear
+    </footer>
+
 </html>
