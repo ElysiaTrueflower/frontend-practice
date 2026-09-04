@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" doctype html>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>今天吃什么？</title>
+    </head>
+    <body>
+        <header>
+            <h2>吃？饭意向收集</h2>
+        </header>
+
+        <nav>
+            <p style="display:inline-block;color: crimson;font-size: 18px; font-weight:bold;">sxy红心推荐：</p>
+            <a href="https://www.bilibili.com/video/BV1KmDZBPEu7/?spm_id_from=333.1387.favlist.content.click&vd_source=612435f9bc6c72d0a962fcb3257ca48e">美食一</a>
+            <a href="https://www.bilibili.com/video/BV1onRxBKE8b/?spm_id_from=333.1387.favlist.content.click&vd_source=612435f9bc6c72d0a962fcb3257ca48e">美食二</a>
+            <a href="https://www.bilibili.com/video/BV17qJs6XERk/?spm_id_from=333.1387.favlist.content.click&vd_source=612435f9bc6c72d0a962fcb3257ca48e">美食三</a>
+        </nav>
+
+        <main>
+            <section><img src="image/daishu.jpg" style="width:200px;"></section>
+            <p style="display: inline-block; color: darkgoldenrod;font-size: 20px;">我给你分享的美食居然不鉴赏</p>
+        </main>
+
+        <h3 style="text-align: center;">今天吃什么😍</h1>
+        <form>
+            <!--文本输入框-->
+            <label for="name">姓名：</label>
+            <input type="text" id="name" name="name" required>
+            <br>
+            <!--内容输入框-->
+            <label for="food">你想吃：</label>
+            <input type="text" id="food" name="food" required>
+            <br>
+            <!--单选-->
+            <label>性别:</label>
+            <input type="radio" id="male" name="gender" value="male" checked>
+            <label for="male">男</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">女</label>
+            <br>
+            <label>是否随便</label>
+            <input type="radio" id="yes" name="yesno" value="yea" checked>
+            <label for="yea">是</label>
+            <input type="radio" id="no" name="yesno" value="no">
+            <label for="no">否</label>
+            <br>
+            <!--复选框-->
+            <input type="checkbox" id="subscribe" name="subscribe" checked>
+            <label for="subscribe">订阅信息喵，订阅信息谢谢喵</label>
+            <br>
+            <!-- 下拉列表 -->
+            <label for="place">去哪儿:</label>
+            <select id="place" name="place">
+                <option value="qiu">楸苑</option>
+                <option value="nan">楠苑</option>
+                <option value="zi">梓苑</option>
+                <option value="hua">回宿舍</option>
+            </select>
+            <!-- 提交按钮 -->
+            <input type="submit" value="提交">
+        </form>
+        
+    </body>
+</html>
