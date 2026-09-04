@@ -1,7 +1,5 @@
 
 *{
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
 }
 body{
@@ -12,10 +10,9 @@ body{
     background-attachment: fixed;
 }
 main{
-    display: inline-block;
     color: darkgoldenrod;
     font-size: 20px;
-    padding:30px;
+    padding:30px 30px 80px 30px;
     max-width:900px;
     margin:0 auto;
 }
