@@ -1,27 +1,66 @@
-
-*{
-    box-sizing: border-box;
+* {
+  box-sizing: border-box;
 }
-body{
-    background-image: url(image/background.jpg);
+
+body {
+  font-family: "Microsoft YaHei", "PingFang SC", sans-serif;
+  color: #333;
+  line-height: 1.6;
+  background-image: url(image/background1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+main{
+    background-image: url(image/bg1.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
 }
-main{
-    color: darkgoldenrod;
-    font-size: 20px;
-    padding:30px 30px 80px 30px;
-    max-width:900px;
-    margin:0 auto;
+
+header {
+  text-align: center;
 }
-footer{
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    text-align: center;
-    padding: 6px 0;
-    background: #fff;
+
+nav {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+nav a {
+  color: #0d6efd;
+  text-decoration: none;
+  margin: 0 8px;
+}
+
+section {
+  background: #fff;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+input, textarea, select, button {
+  font-size: 16px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  background: #0d6efd;
+  color: #fff;
+  border: none;
+  padding: 8px 24px;
+}
+
+footer {
+  text-align: center;
+  color: #888;
+  font-size: 14px;
 }
