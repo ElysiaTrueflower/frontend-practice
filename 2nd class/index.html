@@ -4,7 +4,7 @@
         <meta charset="UTF-8" doctype html>
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
         <title>今天吃什么？</title>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="css/style.css">
     </head>
 
     <header>
@@ -29,14 +29,14 @@
         <form>
             <!--文本输入框-->
             <label for="name">君の名字：</label>
-            <input type="text" id="name" name="name" required>
+            <input type="text" id="name" name="name" placeholder="请输入君の名字" required>
             <br>
             <!--内容输入框-->
             <label for="food">汝辈想吃：</label>
-            <input type="text" id="food" name="food" required>
+            <input type="text" id="food" name="food" placeholder="请输入你要吃的" required>
             <br>
             <label for="mail">你的邮箱：</label>
-            <input type="email" id="mail" name="mail" required>
+            <input type="email" id="mail" name="mail" placeholder="请输入你的邮箱" required>
             <br>
             <!--单选-->
             <label>君の性别</label>
@@ -46,7 +46,7 @@
             <label for="female">女🚺</label>
             <br>
             <label>是否随便</label>
-            <input type="radio" id="yes" name="yesno" value="yea" checked>
+            <input type="radio" id="yes" name="yesno" value="yes" checked>
             <label for="yea">是✅</label>
             <input type="radio" id="no" name="yesno" value="no">
             <label for="no">否❎</label>
@@ -54,6 +54,9 @@
             <!--复选框-->
             <input type="checkbox" id="subscribe" name="subscribe" checked>
             <label for="subscribe">订阅信息喵，订阅信息谢谢喵</label>
+            <br>
+            <input type="checkbox" id="checkbox2" name="checkbox2">
+            <label for="checkbox2">通知收集者喵</label>
             <br>
             <!-- 下拉列表 -->
             <label for="place">去哪儿:</label>

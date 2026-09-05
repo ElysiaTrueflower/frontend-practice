@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+main{
+    max-width:600px;
+    margin:40px auto;
+    padding:20px;
+}
+details{
+    margin-bottom:20px;
+    border:1px solid #aaa;
+    padding:10px;
+}
+summary{
+    cursor:pointer;
+    font-weight:bold;
+}
+fieldset{
+    padding:20px;
+}
+legend{
+    font-size:18px;
+    padding:0 8px;
+}
+input{
+    padding:6px;
+    font-size:16px;
+    margin:8px 0 14px 0;  /*直接给输入框设置上下间距，代替div的margin*/
+}
+
+input:focus{
+    outline: 2px solid #2196F3;
+    border-color:#2196F3;
+}
+input:invalid{
+    border:2px solid red;
+}
+input:valid{
+    border:2px solid #2ecc71;
+}

@@ -6,7 +6,7 @@ body {
   font-family: "Microsoft YaHei", "PingFang SC", sans-serif;
   color: #333;
   line-height: 1.6;
-  background-image: url(image/background1.jpg);
+  background-image: url(../image/background1.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -16,7 +16,7 @@ body {
 }
 
 main{
-    background-image: url(image/bg1.jpg);
+    background-image: url(../image/bg1.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
