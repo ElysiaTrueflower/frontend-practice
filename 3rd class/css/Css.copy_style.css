@@ -46,3 +46,12 @@ body {
 @media (max-width: 992px) {
     .course-card{ padding: 24px;}
 }
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+}
+
+#courses h2{
+    text-align: center;
+}
