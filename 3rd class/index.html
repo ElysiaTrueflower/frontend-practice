@@ -1,45 +1,48 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>美食导航</title>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-        <style>
-            body {
-                background-image: url(image/background1.jpg);
-                background-repeat: repeat;
-                background-size: cover;
-                background-attachment: fixed;
-            }
-            section{
-                background-image: url(image/background1.jpg);
-                background-repeat: repeat;
-                background-size: cover;
-                background-attachment: fixed;
-            }
-        </style>
-    </head>
-
-    <body>
-        <div class="container">
-            <nav class="navbar navbar-expand-md bg-body-tertiary mb-4">
-                <div class="container-fluid">
-                    <a href="https://space.bilibili.com/1641510245/favlist?fid=1106345845&ftype=create" class="navbar-brand" target="_blank">美食导航</a>
-                    <div>
-                        <nav class="nav">
-                            <a class="nav-link active" href="https://space.bilibili.com/1641510245/favlist?fid=1119200645&ftype=create" target="_blank">全部美食</a>
-                            <a class="nav-link" href="image/daishu.jpg" target="_blank">关于(别点)</a>
-                        </nav>
-                    </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light dark">
+    <title>美食导航</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-image: url(image/background1.jpg);
+            background-repeat: repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        section{
+            background-image: url(image/background1.jpg);
+            background-repeat: repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar navbar-expand-md bg-body-tertiary mb-4">
+            <div class="container-fluid">
+                <a href="https://space.bilibili.com/1641510245/favlist?fid=1106345845&ftype=create" class="navbar-brand" target="_blank">美食导航</a>
+                <!-- 小屏幕汉堡按钮，之前缺失 -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navMenu">
+                    <nav class="nav">
+                        <a class="nav-link active" href="https://space.bilibili.com/1641510245/favlist?fid=1119200645&ftype=create" target="_blank">全部美食</a>
+                        <a class="nav-link" href="image/daishu.jpg" target="_blank">关于(别点)</a>
+                    </nav>
                 </div>
-            </nav>
-        </div>
+            </div>
+        </nav>
+    </div>
 
-        <section id="commonfood">
-            <h2 class="text-center mb-4">普通美食</h2>
-
+    <section id="commonfood">
+        <h2 class="text-center mb-4">普通美食</h2>
+        <div class="container">
             <div class="row g-3">
                 <div class="col-md-6 col-lg-4">
                     <div class="card h-100">
@@ -47,38 +50,37 @@
                             <img src="image/common1.png" class="img-fluid" alt="普通美食①" >
                         </a>
                         <div class="card-body">
-                            <h5 class="hard-title">大学生能飞</h5>
+                            <h5 class="card-title">大学生能飞</h5>
                         </div>
                     </div>
                 </div>
-
                 <div class="col-md-6 col-lg-4">
                     <div class="card h-100">
                         <a href="https://www.bilibili.com/video/BV1TBMM6ZE4t/?spm_id_from=333.1387.favlist.content.click" target="_blank">
                             <img src="image/common2.png" class="img-fluid" alt="普通美食②" >
                         </a>
                         <div class="card-body">
-                            <h5 class="hard-title">Bark</h5>
+                            <h5 class="card-title">Bark</h5>
                         </div>
                     </div>
                 </div>
-
                 <div class="col-md-6 col-lg-4">
                     <div class="card h-100">
                         <a href="https://www.bilibili.com/video/BV1YiodBsEYe/?spm_id_from=333.1387.favlist.content.click" target="_blank">
                             <img src="image/common3.png" class="img-fluid" alt="普通美食③" >
                         </a>
                         <div class="card-body">
-                            <h5 class="hard-title">Ring</h5>
+                            <h5 class="card-title">Ring</h5>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="betterfood">
-            <h2 class="text-center mb-4">更好的美食</h2>
-
+    <section id="betterfood">
+        <h2 class="text-center mb-4">更好的美食</h2>
+        <div class="container">
             <div class="row g-3">
                 <div class="col-md-6 col-lg-4">
                     <div class="card h-100">
@@ -86,38 +88,37 @@
                             <img src="image/better1.png" class="img-fluid" alt="更好的美食①" >
                         </a>
                         <div class="card-body">
-                            <h5 class="hard-title">急急急</h5>
+                            <h5 class="card-title">急急急</h5>
                         </div>
                     </div>
                 </div>
-
                 <div class="col-md-6 col-lg-4">
                     <div class="card h-100">
                         <a href="https://www.bilibili.com/video/BV1jo6gBxEM3/?spm_id_from=333.1387.favlist.content.click" target="_blank">
                             <img src="image/better2.png" class="img-fluid" alt="更好的美食②" >
                         </a>
                         <div class="card-body">
-                            <h5 class="hard-title">糖糖？！</h5>
+                            <h5 class="card-title">糖糖？！</h5>
                         </div>
                     </div>
                 </div>
-
                 <div class="col-md-6 col-lg-4">
                     <div class="card h-100">
                         <a href="https://www.bilibili.com/video/BV1QJr5BcE7S/?spm_id_from=333.1387.favlist.content.click" target="_blank">
                             <img src="image/better3.png" class="img-fluid" alt="更好的美食③" >
                         </a>
                         <div class="card-body">
-                            <h5 class="hard-title">石！？</h5>
+                            <h5 class="card-title">石！？</h5>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="Best">
-            <h2 class="text-center mb-4">极品</h2>
-
+    <section id="Best">
+        <h2 class="text-center mb-4">极品</h2>
+        <div class="container">
             <div class="row g-3">
                 <div class="col-md-6 col-lg-4">
                     <div class="card h-100">
@@ -125,38 +126,52 @@
                             <img src="image/ultimate1.png" class="img-fluid" alt="极品①" >
                         </a>
                         <div class="card-body">
-                            <h5 class="hard-title">自己品</h5>
+                            <h5 class="card-title">自己品</h5>
                         </div>
                     </div>
                 </div>
-
                 <div class="col-md-6 col-lg-4">
                     <div class="card h-100">
                         <a href="https://www.bilibili.com/video/BV1KmDZBPEu7/?spm_id_from=333.1387.favlist.content.click" target="_blank">
                             <img src="image/ultimate2.png" class="img-fluid" alt="极品②" >
                         </a>
                         <div class="card-body">
-                            <h5 class="hard-title">自己品</h5>
+                            <h5 class="card-title">自己品</h5>
                         </div>
                     </div>
                 </div>
-
                 <div class="col-md-6 col-lg-4">
                     <div class="card h-100">
                         <a href="https://www.bilibili.com/video/BV17qJs6XERk/?spm_id_from=333.1387.favlist.content.click&vd_source=612435f9bc6c72d0a962fcb3257ca48e" target="_blank">
                             <img src="image/ultimate3.png" class="img-fluid" alt="极品③" >
                         </a>
                         <div class="card-body">
-                            <h5 class="hard-title">自己品</h5>
+                            <h5 class="card-title">自己品</h5>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-        
+        </div>
+    </section>
 
-        <footer class="bg-body-tertiary mt-5 py-3 text-center">
-            <p style="color: #b5acb0a3;">MadeBy<a href="image/ting.jpg" target="_blank">@Starbear</a></p>
-        </footer>
-    </body>
+    <footer class="bg-body-tertiary mt-5 py-3 text-center">
+        <p style="color: #b5acb0a3;">MadeBy<a href="image/ting.jpg" target="_blank">@Starbear</a></p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const html = document.documentElement;
+        const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+        function setTheme() {
+            if (mediaQuery.matches) {
+                html.setAttribute('data-bs-theme', 'dark');
+            } else {
+                html.setAttribute('data-bs-theme', 'light');
+            }
+        }
+        setTheme();
+        mediaQuery.addEventListener('change', setTheme);
+    </script>
+   
+</body>
 </html>
