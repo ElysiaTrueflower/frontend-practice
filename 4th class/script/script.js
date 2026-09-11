@@ -1,61 +1,117 @@
-const scores=[
-    {name:'张三',score:92},
-    {name:'李四',score:45},
-    {name:'王五',score:77},
-    {name:'赵六',score:59},
-    {name:'孙七',score:88},
-    {name:'周八',score:105},
-    {name:'吴九',score:-3},
+const runList = [
+  { name: "张三", gender:"男", total: 128, pace: 4.2 },
+  { name: "李四", gender:"男", total: 95, pace: 8.8 },
+  { name: "王五", gender:"女", total: -5, pace: 6.1 },
+  { name: "赵六", gender:"女", total: 98, pace: 9.5 },
+  { name: "孙七", gender:"女", total: 105, pace: 3 },
+  { name: "钱八", gender:"男", total: 45, pace: 5.5 },
+  { name: "周九", gender:"男", total: 200, pace: 7.2 }
 ];
 
-const cleanScores=(list)=> list.filter(s => s.score>=0 && s.score<=100);
-
-const average=(list)=> {
-    if(list.length===0) return 0;
-    const total=list.reduce((sum,s)=>sum+s.score,0);
-    return (total/list.length).toFixed(2);
+function cleanData(list) {
+    return list.filter(function (item) {
+        return item.total >0 && item.pace >0;
+    }).map(function (item) {
+    return {
+        name:item.name,
+        gender:item.gender,
+        total:item.total,
+        pace:item.pace
+    };
+  });
 }
 
-const highest =(list)=>list.reduce((max,s)=>s.score>max.score ? s:max,list[0]);
-
-const failed=(list)=>list.filter(s=>s.score<60).map(s=>s.name);
-
-function lowest(list){
-    return list.reduce((min,s)=>s.score<min.score ? s:min,list[0]);
+function runGrade(gender, total) {
+    if(gender === "男"){
+        if(total>=120) return 'A';
+        if(total>=90) return 'B';
+        if(total>=60) return 'C';
+        if(total>=30) return 'D';
+        return 'F';
+    }else{
+        if(total>=100) return 'A';
+        if(total>=80) return 'B';
+        if(total>=60) return 'C';
+        if(total>=40) return 'D';
+        return 'F';
+  }
 }
 
-console.log('清洗后',cleanScores(scores));
-console.log('平均分',average(cleanScores(scores)));
-console.log('最高分',highest(cleanScores(scores)));
-console.log('不及格',failed(cleanScores(scores)));
-console.log('最低分',lowest(cleanScores(scores)));
-
-function toGrade(score){
-    if(score>=90) return 'A';
-    if(score>=80) return 'B';
-    if(score>=70) return 'C';
-    if(score>=60) return 'D';
+function paceGrade(pace) {
+    if(pace<=3) return 'A';
+    if(pace<=5) return 'B';
+    if(pace<=7) return 'C';
+    if(pace<=9) return 'D';
     return 'F';
 }
 
- function gradeCount(list){
-    const result={A:0,B:0,C:0,D:0,F:0};
-    for(const s of list){
-        const grade=toGrade(s.score);
-        result[grade]++;
+function Report(validList) {
+    if(validList.length === 0){
+    return "没有有效数据";
     }
-    return result;
+    const stat = validList.reduce(function(res, item){
+        res.sumTotal += item.total;
+        return res;
+    }, {sumTotal:0});
+
+    const avgTotal = (stat.sumTotal / validList.length).toFixed(2);
+
+    const lines = validList.map(function(item){
+        const rg = runGrade(item.gender, item.total);
+        const pg = paceGrade(item.pace);
+        return `姓名：${item.name}，性别：${item.gender}，总里程：${item.total}km(${rg})，平均配速：${item.pace}min/km(${pg})`;
+    });
 }
 
-function report(list){
-    const valid=cleanScores(list);
-    if(valid.length===0) return '没有有效成绩';
-    const dist =gradeCount(valid);
-    return `有效人数:${valid.length}人,平均分:${average(valid)},最高分:${highest(valid).score} (${highest(valid).name}),最低分:${lowest(valid).score} (${lowest(valid).name});等级分布:A:${dist.A},B:${dist.B},C:${dist.C},D:${dist.D},F:${dist.F};不及格名单:${failed(valid).join('、')||'无'}`;
+function getTotalFor(list){
+    let sum = 0;
+    for(let i = 0; i < list.length; i++){
+        sum += list[i].total;
+    }
+    return sum;
+}
+
+function sortRunList(validList){
+    const arr = [...validList];
+    arr.sort(function(a,b){
+        if(runGrade(a.gender,a.total) !== runGrade(b.gender,b.total)){
+        return runGrade(b.gender,b.total).localeCompare(runGrade(a.gender,a.total));
+        }
+        return b.total - a.total;
+    });
+    return arr;
+}
+
+const validData = cleanData(runList);
+console.log("清洗后数据：", validData);
+
+console.time("reduce统计耗时");
+const reportText = Report(validData);
+console.timeEnd("reduce统计耗时");
+console.log(reportText);
+
+console.time("for循环统计耗时");
+const forTotal = getTotalFor(validData);
+console.timeEnd("for循环统计耗时");
+console.log("for循环总里程：", forTotal);
+
+const sortedList = sortRunList(validData);
+console.log("排序结果：", sortedList);
+
+const inputName = prompt("输入学生姓名：");
+const inputGender = prompt("输入性别（男/女）：");
+const inputTotal = Number(prompt("输入总里程(km)："));
+const inputPace = Number(prompt("输入平均配速(min/km)："));
+
+if(!isNaN(inputTotal) && !isNaN(inputPace)){
+    runList.push({name: inputName, gender:inputGender, total: inputTotal, pace: inputPace});
+    console.log("新增后", cleanData(runList));
+}else{
+    alert("输入数据非法");
 }
 
 try{
-    console.log(report(scores));
+    document.body.innerHTML += `<pre>${reportText}</pre>`;
 }catch(err){
-    console.error('报告生成失败:',err.message);
+    console.error('输出失败：', err.message);
 }
