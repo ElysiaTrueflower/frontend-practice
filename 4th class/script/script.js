@@ -61,6 +61,7 @@ function Report(validList) {
         const pg = paceGrade(item.pace);
         return `姓名：${item.name}，性别：${item.gender}，总里程：${item.total}km(${rg})，平均配速：${item.pace}min/km(${pg})`;
     });
+    return lines.join('\n');
 }
 
 function getTotalFor(list){
