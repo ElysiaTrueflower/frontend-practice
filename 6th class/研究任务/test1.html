@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Promise.all并行加载</title>
+  <link href="..libs/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="p-4">
+  <h2>并行请求研究 Promise.all</h2>
+  <div id="status" class="alert alert-info">等待加载</div>
+  <div id="result" class="mt-3"></div>
+  <button id="btnRunParallel" class="btn btn-primary">并行加载(Promise.all)</button>
+  <button id="btnRunSerial" class="btn btn-secondary">串行加载</button>
+
+  <script src="..libs/jquery-3.7.1.min.js"></script>
+  <script src="test1.js"></script>
+</body>
+</html>
