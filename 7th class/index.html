@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>3D旋转展示台</title>
+  <style>
+    body { margin:0;padding: 0 ;overflow:hidden; }
+  </style>
+</head>
+<body>
+
+    <audio id="bgMusic" src="audio/bgm.mp3" loop preload="auto" crossorigin="anonymous">
+
+    <div style="position:absolute;top:12px;right:12px;z-index:10000;">
+         <button id="musicBtn" style="padding:6px 12px;font-size:14px;">暂停音乐</button>
+    </div>
+
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://cdn.jsdelivr.net/npm/three@0.152.0/build/three.module.js",
+    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.152.0/examples/jsm/"
+  }
+}
+</script>
+
+<script type="module" src="showcase.js"></script>
+</body>
+</html>
