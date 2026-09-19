@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test1</title>
+    <style>
+        .box { padding:1rem; border:1px solid #ccc; max-width:600px; margin:2rem auto; }
+        button { padding: 8px 16px; }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="box">
+            <h2>校园联系人登记</h2>
+            <form id="a11yForm">
+                <div>
+                    <label for="username">姓名</label>
+                    <input type="text" id="username" required>
+                </div>
+                <div style="margin-top:8px;">
+                    <label for="tel">电话</label>
+                    <input type="tel" id="tel" required>
+                </div>
+                <button type="submit">提交</button>
+            </form>
+            <img src="test_img1.png" alt="图">
+        </div>
+    </main>
+<script>
+const form = document.querySelector('#a11yForm');
+form.addEventListener('submit',(e)=>{
+    e.preventDefault();
+    alert("提交成功！");
+})
+</script>
+</body>
+</html>
